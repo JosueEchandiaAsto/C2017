@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Convencion Perú | Predica con responsabilidad y unción</title>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet"/>
+    <link rel="stylesheet" href="./assets/css/index.css"/>
+  </head>
+  <body>
+    <header class="header-box">
+      <div class="vr-box">
+        <a-scene>
+              <a-assets>
+                <img src="https://ucarecdn.com/67f15bb6-2932-44b9-8c8d-3a7314e116ab/" id="logo"></img>
+              </a-assets>
+              <a-assets>
+                <img src="https://ucarecdn.com/5a238c82-740c-4a98-b894-6afc93aab6a4/" id="stadium"></img>
+              </a-assets>
+              <a-image src="#logo" position="0 0.7 -5" width="3" height="1">
+                <a-animation
+                   dur="3000"
+                   attribute="opacity"
+                   from="0"
+                   to="1">
+
+                </a-animation>
+              </a-image>
+
+              <a-sky src="#stadium"></a-sky>
+         </a-scene>
+        </div>
+        <div class="nav-box">
+          <nav>
+            <ul>
+              <li><a href=""><i class="icon-images"></i>Sedes</a></li>
+              <li><a href=""><i class="icon-file-text"></i>Noticias</a></li>
+              <li><a href=""><i class="icon-messages"></i>Testimonios</a></li>
+              <li><a href=""><i class="icon-mic"></i>Expositores</a></li>
+              <li><a href=""><i class="icon-tv"></i>En Vivo</a></li>
+            </ul>
+          </nav>
+        </div>
+    </header>
+  </body>
+</html>

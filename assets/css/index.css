@@ -75,7 +75,7 @@ a{
   position: relative;
 }
 .vr-box, .vr-box a-scene{
-  height: 100vh;
+  height: 95vh;
 }
 .vr-box canvas{
   height: inherit !important;

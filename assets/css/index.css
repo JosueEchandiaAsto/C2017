@@ -126,3 +126,9 @@ a{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.a-html{
+  position: static;
+}
+.a-body{
+  overflow: scroll;
+}

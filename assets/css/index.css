@@ -70,7 +70,7 @@ a{
 
 /*HEADER 1**/
 
-.header-box{
+.header-box, .second-box{
   height: 100vh;
   position: relative;
 }
@@ -132,3 +132,41 @@ a{
 .a-body{
   overflow: scroll;
 }
+
+
+
+
+.second-box{
+  background: url("../img/fondo_morado.png");
+}
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  max-width: 1000px;
+  padding: 0;
+  margin: auto;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0;
+  }

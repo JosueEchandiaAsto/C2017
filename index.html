@@ -1,68 +1,226 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Convencion Perú | Predica con responsabilidad y unción</title>
-    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet"/>
-    <link rel="stylesheet" href="./assets/css/index.css"/>
-  </head>
-  <body>
-    <header class="header-box">
-      <div class="vr-box">
-        <a-scene>
-              <a-assets>
-                <img src="https://ucarecdn.com/67f15bb6-2932-44b9-8c8d-3a7314e116ab/" id="logo"></img>
-              </a-assets>
-              <a-assets>
-                <img src="https://ucarecdn.com/5a238c82-740c-4a98-b894-6afc93aab6a4/" id="stadium"></img>
-              </a-assets>
-              <a-image src="#logo" position="0 0.7 -5" width="3" height="1">
-                <a-animation
-                   dur="3000"
-                   attribute="opacity"
-                   from="0"
-                   to="1">
 
-                </a-animation>
-              </a-image>
+<head>
+  <meta charset="utf-8">
+  <title>Convencion Perú | Predica con responsabilidad y unción</title>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
 
-              <a-sky src="#stadium"></a-sky>
-         </a-scene>
+<body>
+  <header class="header-box">
+    <div class="vr-box">
+      <a-scene>
+        <a-assets>
+          <img src="https://ucarecdn.com/67f15bb6-2932-44b9-8c8d-3a7314e116ab/" id="logo"></img>
+        </a-assets>
+        <a-assets>
+          <img src="https://ucarecdn.com/5a238c82-740c-4a98-b894-6afc93aab6a4/" id="stadium"></img>
+        </a-assets>
+        <a-image src="#logo" position="0 0.7 -5" width="3" height="1">
+          <a-animation dur="3000" attribute="opacity" from="0" to="1">
+
+          </a-animation>
+        </a-image>
+
+        <a-sky src="#stadium"></a-sky>
+      </a-scene>
+    </div>
+    <div class="nav-box">
+      <nav>
+        <ul>
+          <li><a href=""><i class="icon-images"></i>Sedes</a></li>
+          <li><a href=""><i class="icon-file-text"></i>Noticias</a></li>
+          <li><a href=""><i class="icon-messages"></i>Testimonios</a></li>
+          <li><a href=""><i class="icon-mic"></i>Expositores</a></li>
+          <li><a href=""><i class="icon-tv"></i>En Vivo</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="second-box">
+    <div id="carousel" class="second-box-container carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./assets/img/sede_lima.png" alt="First slide">
         </div>
-        <div class="nav-box">
-          <nav>
-            <ul>
-              <li><a href=""><i class="icon-images"></i>Sedes</a></li>
-              <li><a href=""><i class="icon-file-text"></i>Noticias</a></li>
-              <li><a href=""><i class="icon-messages"></i>Testimonios</a></li>
-              <li><a href=""><i class="icon-mic"></i>Expositores</a></li>
-              <li><a href=""><i class="icon-tv"></i>En Vivo</a></li>
-            </ul>
-          </nav>
-        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+      <span class="icon-circle-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+    <span class="icon-circle-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+    </div>
+  </section>
+  <section class="noticias-box">
+    <header>
+      <h3 class="header_subtitle">Noticias</h3>
     </header>
-    <section class="second-box">
-      <ul class="rslides">
-        <li><img src="https://ucarecdn.com/5a238c82-740c-4a98-b894-6afc93aab6a4/" alt=""></li>
-        <li><img src="https://ucarecdn.com/67f15bb6-2932-44b9-8c8d-3a7314e116ab/" alt=""></li>
-        <li><img src="https://ucarecdn.com/5a238c82-740c-4a98-b894-6afc93aab6a4/" alt=""></li>
+    <section class="noticias-box-item-container">
+      <article class="noticias-box-item-container-card">
+        <div class="top-card">
+          <i class="icon-images"></i>
+          <i class="icon-images"></i> 17/20/17 Hace 12 min
+        </div>
+        <div class="image-card" style="background-image:url('http://www.betheltv.tv/wp-content/uploads/web-nota-tercerservicio-300x200.jpg')">
+        </div>
+        <div class="content-card">
+          <h4 class="title">Llegada de oficiales a la ciudad des chiclayo</h4>
+          <p>Se espera grandes cosas en nuestra 25 convencion Nacional en el Estadio</p>
+        </div>
+        <div class="button-bottom">
+          <a class="button-open">
+            <i class="icon-images"></i>
+            ABRIR
+          </a>
+          <a class="button-share">
+            <i class="icon-images"></i>
+            COMPARTIR
+          </a>
+        </div>
+      </article>
+      <article class="noticias-box-item-container-card">
+        <div class="top-card">
+          <i class="icon-images"></i>
+          <i class="icon-images"></i> 17/20/17 Hace 12 min
+        </div>
+        <div class="image-card" style="background-image:url('http://www.betheltv.tv/wp-content/uploads/web-nota-tercerservicio-300x200.jpg')">
+        </div>
+        <div class="content-card">
+          <h4 class="title">Llegada de oficiales a la ciudad des chiclayo</h4>
+          <p>Se espera grandes cosas en nuestra 25 convencion Nacional en el Estadio</p>
+        </div>
+        <div class="button-bottom">
+          <a class="button-open">
+            <i class="icon-images"></i>
+            ABRIR
+          </a>
+          <a class="button-share">
+            <i class="icon-images"></i>
+            COMPARTIR
+          </a>
+        </div>
+      </article>
+      <article class="noticias-box-item-container-card">
+        <div class="top-card">
+          <i class="icon-images"></i>
+          <i class="icon-images"></i> 17/20/17 Hace 12 min
+        </div>
+        <div class="image-card" style="background-image:url('http://www.betheltv.tv/wp-content/uploads/web-nota-tercerservicio-300x200.jpg')">
+        </div>
+        <div class="content-card">
+          <h4 class="title">Llegada de oficiales a la ciudad des chiclayo</h4>
+          <p>Se espera grandes cosas en nuestra 25 convencion Nacional en el Estadio</p>
+        </div>
+        <div class="button-bottom">
+          <a class="button-open">
+            <i class="icon-images"></i>
+            ABRIR
+          </a>
+          <a class="button-share">
+            <i class="icon-images"></i>
+            COMPARTIR
+          </a>
+        </div>
+      </article>
+    </section>
+    <div class="button-add">
+      <i class="icon-add"></i>
+    </div>
+  </section>
+  <section class="testimonios-box">
+    <header>
+      <h3 class="header_subtitle">Testimonios</h3>
+    </header>
+    <div id="carousel" class="testimonios-box-container carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="social-box">
+            <img src="./assets/img/social.png" alt="">
+          </div>
+          <div class="text-box">
+            <p class="tint">
+              Ulises Morales Quezada
+            </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+        <span class="icon-circle-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+        <span class="icon-circle-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <section class="expositores-box">
+    <header>
+      <h3 class="header_subtitle">Expositores</h3>
+    </header>
+    <div class="expositores-box-container">
+      <ul>
+        <li class="item-expositor">
+          <div class="image">
+            <img src="./assets/img/pastor.png" alt="">
+          </div>
+          <p class="tint">Gustavo Martínez</p>
+          <p>Presidente</p>
+        </li>
+        <li class="item-expositor">
+          <div class="image w">
+            <img src="./assets/img/josesoto.png" alt="">
+          </div>
+            <p class="tint">José A. Soto</p>
+            <p>VICE-PRESIDENTE
+            SUPERVISOR MISIONERO
+            DE EUROPA
+            </p>
+        </li>
+        <li class="item-expositor">
+          <div class="image">
+            <img src="./assets/img/rodolfogonzales.png" alt="">
+          </div>
+          <p class="tint">Rodolfo González Cruz</p>
+            <p>Tesorero</p>
+        </li>
+        <li class="item-expositor">
+          <div class="image">
+            <img src="./assets/img/alvarogaravito.png" alt="">
+          </div>
+          <p class="tint">Alvaro Garavito</p>
+          <p>SUPERVISOR DE GUATEMALA
+          Y SUPERVISOR MISIONERO
+          EN CENTROAMERICA</p>
+        </li>
       </ul>
     </div>
-  </body>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.55/responsiveslides.min.js" charset="utf-8"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ResponsiveSlides.js/1.55/responsiveslides.min.css">
-  <script>
-    $(function() {
-      $(".rslides").responsiveSlides({
-        auto: false,
-        pager: false,
-        nav: true,
-        speed: 500,
-        maxwidth: 1000,
-        namespace: "large-btns"
-      });
-    });
-  </script>
+  </section>
+  <footer class="footer">
+    <div class="social-box">
+      <i class="icon-facebook"></i>
+      <i class="icon-twitter"></i>
+      <i class="icon-youtube"></i>
+    </div>
+    <p>
+      <img src="./assets/img/logommm.png" alt="">
+    </p>
+    <p>Todos los derechos reservados © <br>
+Av. 28 de Julio 1781 - La Victoria , Lima - Perú. Teléfono (511) 613-1725 | Fax( 511) 613-1717 </p>
+  </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="./assets/css/index.css" />
+
 </html>

@@ -381,6 +381,7 @@ a{
 .burger-button{
   position: absolute;
   top: .5em;
+  display: none;
   left: .5em;
   font-size: 3em;
   z-index: 100;
@@ -631,6 +632,9 @@ a{
   .nav-box ul{
     flex-wrap: wrap;
     justify-content: flex-start;
+  }
+  .burger-button{
+    display: block;
   }
   .nav-box li {
     margin: 0 1em;

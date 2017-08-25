@@ -199,6 +199,9 @@
 .icon-circle-right:before {
   content: "\ea42";
 }
+.icon-circle-down:before {
+  content: "\ea43";
+}
 .icon-circle-left:before {
   content: "\ea44";
 }
@@ -206,6 +209,7 @@
 
 body{
   font-family: 'Roboto', sans-serif;
+  transition: 300ms;
 }
 ul, li, a
 {
@@ -297,6 +301,7 @@ a{
 }
 .a-body{
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 
@@ -328,11 +333,6 @@ a{
   max-width: 900px;
   margin: auto;
 }
-
-
-
-
-
 
 .noticias-box{
   min-height: 100vh;
@@ -399,6 +399,18 @@ a{
   display: block;
 }
 
+.second-box-button-down{
+  background: -webkit-linear-gradient(top, #20EDF3, #FBDC04);
+  background: linear-gradient(top, #20EDF3, #FBDC04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3em;
+  position: absolute;
+  bottom: 120px;
+  text-align: center;
+  z-index: 101;
+  width: 100%;
+}
 .top-card{
   margin: 1.3em .8em .8em .8em;
   color: #6f684b;
@@ -523,7 +535,7 @@ a{
 .expositores-box-container ul{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .item-expositor{
   width: 23%;
@@ -583,6 +595,10 @@ a{
 .carousel-item .social-box img{
   width: 100%;
 }
+.footer img{
+  max-width: 320px;
+  width: 100%;
+}
 
 @media (max-width: 1000px){
   .carousel-control-next, .carousel-control-prev {
@@ -612,6 +628,9 @@ a{
   .noticias-box-item-container-card{
     width: 47%;
     margin-bottom: 1em;
+  }
+  .second-box-button-down{
+    bottom: 50px;
   }
   .nav-box{
     position: absolute;
@@ -643,4 +662,49 @@ a{
     width: 100%;
   }
 
+}
+@media (max-width: 720px){
+  .testimonios-box-container .carousel-item{
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 400px;
+    margin: auto;
+  }
+  .carousel-item .text-box, .carousel-item .social-box{
+    width: 100%;
+  }
+  .header_subtitle{
+    font-size: 4em;
+  }
+  .noticias-box-item-container{
+    max-width: 400px;
+  }
+  .noticias-box-item-container-card{
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px){
+  .nav-box{
+    width: 100%;
+    left: -100%;
+  }
+  .header_subtitle{
+    font-size: 3em;
+  }
+  .noticias-box{
+    padding: 3em 1.5em;
+  }
+  .second-box-container{
+    padding: 0
+  }
+  .testimonios-box-container{
+    padding: 0;
+  }
+  .footer {
+    margin-top: 0;
+  }
+  .content-card, .button-bottom{
+    font-size: 1em;
+  }
 }

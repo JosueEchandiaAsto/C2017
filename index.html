@@ -28,8 +28,8 @@
         <a-sky src="#stadium"></a-sky>
       </a-scene>
     </div>
-    <div class="nav-box">
-      <nav>
+    <div id="menu" class="nav-box">
+      <nav >
         <ul>
           <li><a href=""><i class="icon-images"></i>Sedes</a></li>
           <li><a href=""><i class="icon-file-text"></i>Noticias</a></li>
@@ -39,6 +39,11 @@
         </ul>
       </nav>
     </div>
+    <div class="burger-button">
+      <i id="showMenu" class="is-active open icon-menu"></i>
+      <i id="hideMenu" class="icon-cancel"></i>
+    </div>
+    <div class="pan" id="body"></div>
   </header>
   <section class="second-box">
     <div id="carousel" class="second-box-container carousel slide" data-ride="carousel">
@@ -220,7 +225,36 @@ Av. 28 de Julio 1781 - La Victoria , Lima - Perú. Teléfono (511) 613-1725 | Fa
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+<script src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+<script type="text/javascript">
+if(window.matchMedia("(max-width:1000px)").matches)
+        {
+          var $buttonShowMenu = document.getElementById("showMenu");
+          var $buttonHideMenu = document.getElementById("hideMenu");
+          var $menu = document.getElementById("menu");
+          var $body = document.getElementById("body");
+          var body = new Hammer($body);
+          var showMenu = function(){
+            $buttonShowMenu.classList.remove("is-active");
+            $buttonHideMenu.classList.add("is-active");
+            $menu.classList.add("is-active");
+            $body.classList.add("is-active");
+          }
+          var hideMenu = function(){
+            $buttonHideMenu.classList.remove("is-active");
+            $buttonShowMenu.classList.add("is-active");
+            $menu.classList.remove("is-active");
+            $body.classList.remove("is-active");
+          }
+          $buttonShowMenu.addEventListener("click", showMenu);
+          $buttonHideMenu.addEventListener("click", hideMenu);
 
+          body.on('panright',showMenu)
+          body.on('panleft',hideMenu)
+        }else{
+          console.log("eres un ipad o más")
+        }
+</script>
 <link rel="stylesheet" href="./assets/css/index.css" />
 
 </html>

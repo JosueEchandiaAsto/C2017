@@ -163,6 +163,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-menu:before {
+  content: "\e906";
+}
+.icon-mic:before {
+  content: "\e900";
+}
+.icon-messages:before {
+  content: "\e901";
+}
 .icon-youtube:before {
   content: "\e905";
 }
@@ -172,14 +181,11 @@
 .icon-facebook:before {
   content: "\e904";
 }
+.icon-cancel:before {
+  content: "\e907";
+}
 .icon-add:before {
   content: "\e902";
-}
-.icon-mic:before {
-  content: "\e900";
-}
-.icon-messages:before {
-  content: "\e901";
 }
 .icon-images:before {
   content: "\e90e";
@@ -196,6 +202,7 @@
 .icon-circle-left:before {
   content: "\ea44";
 }
+
 
 body{
   font-family: 'Roboto', sans-serif;
@@ -230,7 +237,7 @@ a{
 /*HEADER 1**/
 
 .header-box, .second-box, .testimonios-box, .expositores-box{
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .vr-box, .vr-box a-scene{
@@ -298,6 +305,7 @@ a{
 .second-box{
   background: url("../img/fondo_morado.png");
   background-position: bottom;
+  padding: 1em;
 }
 .second-box-container{
   max-width: 1400px;
@@ -370,12 +378,36 @@ a{
   -webkit-box-orient: vertical;
 }
 
+.burger-button{
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  font-size: 3em;
+  z-index: 100;
+}
+.burger-button i{
+  width: 50px;
+  height: 50px;
+  display: none;
+  background: -webkit-linear-gradient(top, #20EDF3, #FBDC04);
+  background: linear-gradient(top, #20EDF3, #FBDC04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.burger-button i.is-active{
+  display: block;
+}
 
 .top-card{
-  padding: 1.3em .8em .8em .8em;
+  margin: 1.3em .8em .8em .8em;
   color: #6f684b;
   font-weight: lighter;
   font-size: 1.15em;
+  line-height: 1em;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
 }
 .top-card i{
   background: -webkit-linear-gradient(top, #20EDF3, #FBDC04);
@@ -416,6 +448,18 @@ a{
   background: linear-gradient(top, #20EDF3, #FBDC04);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.pan{
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.pan.is-active{
+  width: 100%;
 }
 
 .button-add{
@@ -534,4 +578,65 @@ a{
 .footer p{
   color: #848483;
   font-weight: lighter;
+}
+.carousel-item .social-box img{
+  width: 100%;
+}
+
+@media (max-width: 1000px){
+  .carousel-control-next, .carousel-control-prev {
+    width: auto;
+  }
+  .testimonios-box {
+    padding: 3em 1em;
+  }
+  .testimonios-box-container{
+    padding: 0 3em;
+  }
+  .expositores-box-container {
+    max-width: 500px;
+  }
+  .item-expositor {
+    width: 230px;
+    margin-bottom: 1em;
+  }
+  .expositores-box{
+    height: auto;
+    min-height: 100vh;
+  }
+  .noticias-box-item-container{
+    max-width: 700px;
+    justify-content: space-around;
+  }
+  .noticias-box-item-container-card{
+    width: 47%;
+    margin-bottom: 1em;
+  }
+  .nav-box{
+    position: absolute;
+    top: 0;
+    left: -11em;
+    width: 11em;
+    height: 100%;
+    transition: 300ms;
+  }
+  .nav-box.is-active{
+    left: 0;
+  }
+  .nav-box nav {
+    height: 100%;
+    padding-top: 8em;
+    width: inherit;
+  }
+  .nav-box ul{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .nav-box li {
+    margin: 0 1em;
+    height: auto;
+    padding: .5em 1em;
+    width: 100%;
+  }
+
 }

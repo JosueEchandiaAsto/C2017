@@ -156,7 +156,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 @font-face {
     font-family: 'SheAlways';
-    src: url('./fonts/She Always Walks Alone Demo.ttf') format('truetype');
+    src: url('../fonts/She Always Walks Alone Demo.ttf') format('truetype');
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -416,8 +416,9 @@ a{
   display: none;
   left: .5em;
   font-size: 3em;
-  z-index: 100;
+  z-index: 102;
 }
+
 .burger-button i{
   width: 50px;
   height: 50px;
@@ -496,6 +497,7 @@ a{
 }
 
 .pan{
+  z-index: 99
   position: absolute;
   width: 100px;
   height: 100%;
@@ -517,7 +519,7 @@ a{
   -webkit-text-fill-color: transparent;
 }
 .testimonios-box{
-  background: url("./img/fondo-rosa.png");
+  background: url("../img/fondo-rosa.png");
   background-repeat: repeat;
   padding: 3em;
 }
@@ -557,7 +559,7 @@ a{
 
 
 .expositores-box{
-  background: url("./img/fondo-azul.png");
+  background: url("../img/fondo-azul.png");
   background-position: bottom;
   padding: 3em;
 }
@@ -782,6 +784,12 @@ a{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.navbar-fixed{
+  position: fixed;
+  top: 0;
+  z-index: 101;
+}
 @media (max-width: 1000px){
   .carousel-control-next, .carousel-control-prev {
     width: auto;
@@ -825,6 +833,7 @@ a{
   .nav-box.is-active{
     left: 0;
   }
+
   .nav-box-container{
     height: 100%;
     padding-top: 8em;
@@ -852,6 +861,11 @@ a{
   .one-noticia-container {
     margin: auto;
     padding: 0;
+  }
+  .navbar-fixed{
+    position: fixed;
+    top: 0;
+    z-index: 101;
   }
 }
 @media (max-width: 720px){
@@ -898,4 +912,7 @@ a{
   .content-card, .button-bottom{
     font-size: 1em;
   }
+}
+.button-fixed{
+  position: fixed;
 }

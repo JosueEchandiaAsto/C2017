@@ -30,7 +30,7 @@
     <div id="downClick" class="second-box-button-down" href="#second-box"><i class="icon-circle-down"></i></div>
     <nav class="nav">
       <div id="menu" class="nav-box">
-        <div  class="nav-box-container">
+        <div class="nav-box-container">
             <ul>
               <li><a href=""><i class="icon-images"></i>Sedes</a></li>
               <li><a href=""><i class="icon-file-text"></i>Noticias</a></li>
@@ -42,7 +42,7 @@
         </div>
       </div>
     </nav>
-    <div class="burger-button">
+    <div id="burger-button" class="burger-button">
       <i id="showMenu" class="is-active open icon-menu"></i>
       <i id="hideMenu" class="icon-cancel"></i>
     </div>
@@ -233,6 +233,26 @@ Av. 28 de Julio 1781 - La Victoria , Lima - Perú. Teléfono (511) 613-1725 | Fa
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
 <script type="text/javascript">
+
+$(document).ready(function() {
+
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the
+      //nav bar to stick.
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > 600) {
+      $('#menu').addClass('navbar-fixed');
+      $('#burger-button').addClass('button-fixed');
+      $('#body').addClass('button-fixed');
+    }
+    if ($(window).scrollTop() < 601) {
+      $('#menu').removeClass('navbar-fixed');
+      $('#burger-button').removeClass('button-fixed');
+      $('#body').removeClass('button-fixed');
+    }
+  });
+});
           var $buttonShowMenu = document.getElementById("showMenu");
           var $buttonHideMenu = document.getElementById("hideMenu");
           var $menu = document.getElementById("menu");

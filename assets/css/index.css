@@ -1,6 +1,17 @@
-/**Fuentes:
-    font-family: 'Raleway', sans-serif;
-    **/
+/*
+Theme Name: Convencion 2017
+Theme URI: https://convencion2017.com
+Author: Josue Echandia Asto
+Author URI: https://wordpress.org/
+Description: Twenty Seventeen brings your site to life with immersive featured images and subtle animations. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: twentyseventeen
+Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
     .rslides {
       margin: 0 auto;
       }
@@ -145,7 +156,7 @@
 }
 @font-face {
     font-family: 'SheAlways';
-    src: url('../fonts/She Always Walks Alone Demo.ttf') format('truetype');
+    src: url('./fonts/She Always Walks Alone Demo.ttf') format('truetype');
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -163,8 +174,44 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-film:before {
+  content: "\e908";
+}
+.icon-movies:before {
+  content: "\e908";
+}
+.icon-videos:before {
+  content: "\e908";
+}
+.icon-images:before {
+  content: "\e90e";
+}
+.icon-camera:before {
+  content: "\e90f";
+}
+.icon-file-text:before {
+  content: "\e926";
+}
+.icon-tv:before {
+  content: "\e95b";
+}
+.icon-circle-right:before {
+  content: "\ea42";
+}
+.icon-circle-down:before {
+  content: "\ea43";
+}
+.icon-circle-left:before {
+  content: "\ea44";
+}
 .icon-menu:before {
   content: "\e906";
+}
+.icon-home:before {
+  content: "\e90a";
+}
+.icon-share:before {
+  content: "\e909";
 }
 .icon-mic:before {
   content: "\e900";
@@ -187,24 +234,7 @@
 .icon-add:before {
   content: "\e902";
 }
-.icon-images:before {
-  content: "\e90e";
-}
-.icon-file-text:before {
-  content: "\e926";
-}
-.icon-tv:before {
-  content: "\e95b";
-}
-.icon-circle-right:before {
-  content: "\ea42";
-}
-.icon-circle-down:before {
-  content: "\ea43";
-}
-.icon-circle-left:before {
-  content: "\ea44";
-}
+
 
 
 body{
@@ -250,6 +280,13 @@ a{
 .vr-box canvas{
   height: inherit !important;
 }
+
+.nav-box-container{
+  background: url("../img/fondo_nav.png");
+  height: 100%;
+  width: 100vw;
+}
+
 .nav-box{
   font-family: 'Roboto', sans-serif;
   font-style: italic;
@@ -263,11 +300,6 @@ a{
   background: url("../img/fondo_morado.png");
 }
 
-.nav-box nav{
-  background: url("../img/fondo_nav.png");
-  height: 100%;
-  width: 100vw;
-}
 .nav-box ul{
   margin: auto;
   max-width: 1000px;
@@ -336,7 +368,7 @@ a{
 
 .noticias-box{
   min-height: 100vh;
-  background: url(../img/fondo_amarillo.png);
+  background: url("../img/fondo_amarillo.png");
   background-position: bottom;
   padding: 3em;
   padding-bottom: 0;
@@ -485,17 +517,18 @@ a{
   -webkit-text-fill-color: transparent;
 }
 .testimonios-box{
-  background: url("../img/fondo-rosa.png");
+  background: url("./img/fondo-rosa.png");
   background-repeat: repeat;
   padding: 3em;
 }
 .testimonios-box-container{
   height: 80%;
 }
-.testimonios-box-container .carousel-item{
+.testimonios-box-container .carousel-item .columnas{
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
+  align-items: center;
 }
 .carousel-item .social-box,
 .carousel-item .text-box{
@@ -524,7 +557,7 @@ a{
 
 
 .expositores-box{
-  background: url("../img/fondo-azul.png");
+  background: url("./img/fondo-azul.png");
   background-position: bottom;
   padding: 3em;
 }
@@ -576,6 +609,7 @@ a{
 .footer{
   padding: 4em 1em;
   margin-top: 5em;
+  background: white;
   text-align: center;
 }
 .footer .social-box{
@@ -600,6 +634,154 @@ a{
   width: 100%;
 }
 
+
+.header-box.noticia{
+  min-height: auto;
+  position: static;
+  height: 100px;
+}
+
+.header-box.noticia .nav-box{
+  z-index: 100;
+  bottom: initial;
+}
+
+.one-noticia-container{
+  margin: 2em auto;
+  max-width: 800px;
+  background: rgba(21, 21, 21, 0.33);
+  min-height: 100vh;
+  border-radius: 1em;
+  margin-bottom: 10em;
+}
+
+.noticia-body{
+  background: url("../img/fondo_morado.png");
+  background-position: bottom;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-top: 56.25%;
+  }
+.videoWrapper iframe,
+.videoWrapper object,
+.videoWrapper embed {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.one-noticia-container{
+  color: white;
+}
+.header-one-noticia-container h1{
+  text-transform: uppercase;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+
+  font-size: 2em;
+}
+.header-one-noticia-container{
+  padding: 2.3em;
+  padding-bottom: 1em;
+}
+.header-one-noticia-container .data-noticia{
+  padding-top: 1em;
+  font-weight: lighter;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.one-noticia-container .data-noticia i{
+  background: -webkit-linear-gradient(top, #20EDF3, #FBDC04);
+  background: linear-gradient(top, #20EDF3, #FBDC04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+.content-one-noticia-container{
+  padding: 2em;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.gallery-one-noticia-container .gallery-box-title{
+  padding: 0px 1.5em;
+  font-size: 20px;
+  display: flex;
+  font-weight: lighter;
+  justify-content: left;
+  align-items: center;
+}
+.gallery-one-noticia-container .gallery-box-title i{
+  background: -webkit-linear-gradient(top, #20EDF3, #FBDC04);
+  background: linear-gradient(top, #20EDF3, #FBDC04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5em;
+  margin-right: 15px;
+}
+.gallery-one-noticia-container .carousel-control-prev,
+.gallery-one-noticia-container .carousel-control-next{
+  font-size: 0.7em;
+  width: 6em;;
+}
+.gallery-one-noticia-container .carousel-item img{
+  padding: 1em 4em;
+  width: 100%;
+}
+.pagination{
+  display: flex;
+  justify-content: center;
+}
+.pagination li{
+  padding: 3px 12px;
+  margin: auto 5px;
+}
+.pagination li.active{
+  border-top: 1px solid #20EDF3;
+  border-bottom: 1px solid #FBDC04;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#20EDF3), to( #FBDC04));
+  background-image: linear-gradient(top, #20EDF3, #FBDC04);
+  background-image:
+      -moz-linear-gradient(#20EDF3, #FBDC04),
+      -moz-linear-gradient(#20EDF3, #FBDC04);
+  background-image:
+      -o-linear-gradient(#20EDF3, #FBDC04),
+      -o-linear-gradient(#20EDF3, #FBDC04);
+  background-image:
+      linear-gradient(#20EDF3, #FBDC04),
+      linear-gradient(#20EDF3, #FBDC04);
+  -moz-background-size: 3px 100%;
+  background-size: 1px 100%;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+
+}
+.one-noticia-container .social-box{
+  padding: 1em 4em;
+  color: #6dbfab;
+  font-weight: lighter;
+  font-size: 17px;
+  padding-bottom: 2em;
+}
+.one-noticia-container .social-box a{
+  margin-left: 1em;
+}
+.one-noticia-container .social-box i{
+  background: -webkit-linear-gradient(top, #20EDF3, #FBDC04);
+  background: linear-gradient(top, #20EDF3, #FBDC04);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 @media (max-width: 1000px){
   .carousel-control-next, .carousel-control-prev {
     width: auto;
@@ -643,7 +825,7 @@ a{
   .nav-box.is-active{
     left: 0;
   }
-  .nav-box nav {
+  .nav-box-container{
     height: 100%;
     padding-top: 8em;
     width: inherit;
@@ -661,7 +843,16 @@ a{
     padding: .5em 1em;
     width: 100%;
   }
-
+  .header-box.noticia {
+    height: 0px;
+  }
+  footer{
+    margin: 0;
+  }
+  .one-noticia-container {
+    margin: auto;
+    padding: 0;
+  }
 }
 @media (max-width: 720px){
   .testimonios-box-container .carousel-item{
